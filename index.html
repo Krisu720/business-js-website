@@ -63,7 +63,7 @@
       <div class="hidden items-center gap-4 transition-all md:flex lg:gap-12">
         <div
           href="#oferta"
-          class="group inline-flex cursor-pointer items-center gap-[5px] py-6"
+          class="group inline-flex cursor-pointer items-center gap-[5px] py-6 -tracking-[0.14px]"
         >
           Oferta
           <img
@@ -168,11 +168,11 @@
         <div
           class="grid h-full w-full flex-shrink-0 gap-6 bg-primary md:grid-cols-2 md:gap-16"
         >
-          <div class="flex flex-col justify-center px-6 lg:pl-[90px]">
+          <div class="flex flex-col justify-center px-6 py-6 lg:pl-[90px]">
             <h1
               class="mt-4 font-montserrat text-4xl font-medium transition sm:text-5xl md:mt-0 md:text-6xl md:leading-[70px]"
             >
-              Nowoczesna aranżacja Twojego ogrodu
+              Nowoczesna aranżacja <br class="hidden md:block" />Twojego ogrodu
             </h1>
             <p class="mt-4 md:mt-11">
               Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
@@ -217,7 +217,7 @@
       <div class="absolute bottom-0 right-0 z-10 flex bg-gray">
         <button
           id="prevButton"
-          class="flex items-center justify-center py-6 pl-8 pr-4 transition-colors hover:bg-white"
+          class="flex items-center justify-center py-3 pl-4 pr-2 md:py-6 md:pl-8 md:pr-4 transition-colors hover:bg-white"
         >
           <img
             src="/assets/BigLeftArrow.svg"
@@ -227,7 +227,7 @@
         </button>
         <button
           id="nextButton"
-          class="flex items-center justify-center py-6 pl-4 pr-8 transition-colors hover:bg-white"
+          class="flex items-center justify-center py-3 pr-4 pl-2 md:py-6 md:pl-4 md:pr-8 transition-colors hover:bg-white"
         >
           <img
             src="/assets/BigRightArrow.svg"
@@ -237,6 +237,120 @@
         </button>
       </div>
     </main>
+
+    <!-- OFERTA -->
+
+    <section id="oferta" class="bg-gray py-[120px] pb-40">
+      <div class="px-6 md:max-w-6xl md:px-24 lg:px-[200px]">
+        <p class="text-xs text-secondary -tracking-[0.12px]">Oferta</p>
+        <h1
+          class="mt-4 font-montserrat text-5xl font-medium -tracking-[1.44px]"
+        >
+          Działamy <span class="font-inter italic"> kompleksowo</span>
+        </h1>
+        <p class="mt-8 -tracking-[0.16px]">
+          Oferujemy kompletną obsługę inwestycji terenów zielonych. Projektujemy
+          nowoczesne ogrody przydomowe oraz rezydencjonalne. Stworzymy dla
+          Ciebie projekt, zwizualizujemy go i wcielimy w życie, a na każdym
+          etapie posłużymy radą i wieloletnim doświadczeniem.
+        </p>
+      </div>
+
+      <div
+        class="mt-24 flex flex-wrap justify-between gap-8 px-6 md:gap-16 md:px-[88px]"
+      >
+        <a
+        href="#"
+          class="relative gloweffect group flex h-[370px] min-w-[250px] flex-1 flex-col rounded-[28px] bg-white px-10 py-12 items-start"
+        >
+          <img
+            src="/assets/pen.png"
+            class="h-10 w-10"
+            alt="pen icon"
+          />
+          <h1
+            class="mt-8 font-montserrat text-[28px] font-medium -tracking-[1.4px]"
+          >
+            Projekty
+          </h1>
+          <p class="mt-3 text-sm -tracking-[0.14px]">
+            Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym
+            wykorzystaniem istniejącej przestrzeni.
+          </p>
+          <span
+            class="underline-animation mt-auto inline-flex gap-2.5 text-secondary"
+          >
+            Dowiedz się więcej
+            <img
+              src="/assets/RightArrow.svg"
+              alt=""
+              class="transition-transform duration-300 group-hover:-rotate-45"
+            />
+          </span>
+        </a>
+        <a
+        href="#"
+          class="relative gloweffect group flex h-[370px] min-w-[250px] flex-1 flex-col rounded-[28px] bg-white px-10 py-12 items-start"
+        >
+          <div class="flex h-10 w-10 items-center">
+            <img
+              src="/assets/eye.png"
+              alt="eye icon"
+            />
+          </div>
+          <h1
+            class="mt-8 font-montserrat text-[28px] font-medium -tracking-[1.4px]"
+          >
+            Wizualizacje
+          </h1>
+          <p class="mt-3 text-sm -tracking-[0.14px]">
+            Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego spaceru
+            animowanego w technologii 3D.
+          </p>
+
+          <span
+            class="underline-animation mt-auto inline-flex gap-2.5 text-secondary"
+          >
+            Dowiedz się więcej
+            <img
+              class="transition-transform duration-300 group-hover:-rotate-45"
+              src="/assets/RightArrow.svg"
+              alt=""
+            />
+          </span>
+        </a>
+        <a
+        href="#"
+          class="relative gloweffect group flex h-[370px] min-w-[250px] flex-1 flex-col rounded-[28px] bg-white px-10 py-12 items-start"
+        >
+          <img
+            src="/assets/stars.png"
+          class="h-10 w-10"
+            alt="stars icon"
+          />
+          <h1
+            class="mt-8 font-montserrat text-[28px] font-medium -tracking-[1.4px]"
+          >
+            Realizacje
+          </h1>
+          <p class="mt-3 text-sm -tracking-[0.14px]">
+            Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i
+            zaawansowanych technologii.
+          </p>
+
+          <span
+            class="underline-animation mt-auto inline-flex gap-2.5 text-secondary"
+          >
+            Dowiedz się więcej
+            <img
+              class="transition-transform duration-300 group-hover:-rotate-45"
+              src="/assets/RightArrow.svg"
+              alt=""
+            />
+          </span>
+        </a>
+      </div>
+    </section>
 
     <script type="module" src="/main.js"></script>
   </body>

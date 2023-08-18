@@ -1,4 +1,5 @@
 import { setupNavbar } from "./js/navbar";
+import { setupCards } from "./js/offer";
 import { setupSlider } from "./js/slider";
 
 setupNavbar({
@@ -14,3 +15,5 @@ setupSlider({
   prevButton: document.getElementById("prevButton"),
   slider: document.getElementById("slider"),
 });
+
+setupCards({cards: document.querySelectorAll(".gloweffect")})
