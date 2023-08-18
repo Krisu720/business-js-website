@@ -1,4 +1,5 @@
 import { setupNavbar } from "./js/navbar";
+import { setupSlider } from "./js/slider";
 
 setupNavbar({
   toggleMenu: document.getElementById("togglemenubutton"),
@@ -6,4 +7,10 @@ setupNavbar({
   mobileMenu: document.getElementById("mobilemenu"),
   searchToggle: document.getElementById("searchtoggle"),
   searchInput: document.getElementById("searchinput"),
+});
+
+setupSlider({
+  nextButton: document.getElementById("nextButton"),
+  prevButton: document.getElementById("prevButton"),
+  slider: document.getElementById("slider"),
 });

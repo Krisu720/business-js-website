@@ -15,7 +15,10 @@
       data-show="false"
       class="fixed bottom-0 right-0 top-0 z-20 flex h-screen w-full max-w-sm translate-x-full flex-col items-center justify-center gap-6 bg-gray px-2 shadow-md transition-all duration-300 data-[show=true]:translate-x-0"
     >
-      <button id="closemenubutton" class="absolute right-6 top-6 p-2 hover:bg-white rounded-full">
+      <button
+        id="closemenubutton"
+        class="absolute right-6 top-6 rounded-full p-2 hover:bg-white"
+      >
         <img src="/assets/x.svg" alt="closeicon" class="h-6 w-6" />
       </button>
       <h1 class="text-xs text-secondary">Oferta</h1>
@@ -50,7 +53,10 @@
     >
       <img src="/assets/logo.png" alt="giarddesign logo" />
 
-      <button id="togglemenubutton" class="md:hidden p-2 hover:bg-gray rounded-full">
+      <button
+        id="togglemenubutton"
+        class="rounded-full p-2 hover:bg-gray md:hidden"
+      >
         <img src="/assets/list.svg" alt="hamburgericon" class="h-6 w-6" />
       </button>
 
@@ -68,13 +74,18 @@
 
           <!-- OFERTA MENU -->
           <div
-            class="absolute right-0 top-[72px] z-10 hidden w-full animate-slide_bottom cursor-auto gap-6 rounded-b-3xl border-t border-gray bg-white p-6 shadow-xl group-hover:grid grid-cols-3"
+            class="absolute right-0 top-[72px] z-10 hidden w-full animate-slide_bottom cursor-auto grid-cols-3 gap-6 rounded-b-3xl border-t border-gray bg-white p-6 shadow-xl group-hover:grid"
           >
             <a
               href="#"
               class="flex flex-col rounded-[28px] border border-primary bg-white px-10 py-12 transition-colors hover:bg-gray"
             >
-              <img src="/assets/pen.png" height="40px" width="40px" alt="pen icon" />
+              <img
+                src="/assets/pen.png"
+                height="40px"
+                width="40px"
+                alt="pen icon"
+              />
               <h1 class="mt-8 font-montserrat text-[28px] font-medium">
                 Projekty
               </h1>
@@ -87,7 +98,12 @@
               href="#"
               class="flex flex-col rounded-[28px] border border-primary bg-white px-10 py-12 transition-colors hover:bg-gray"
             >
-              <img src="/assets/eye.png" height="40px" width="40px" alt="eye icon" />
+              <img
+                src="/assets/eye.png"
+                height="40px"
+                width="40px"
+                alt="eye icon"
+              />
               <h1 class="mt-8 font-montserrat text-[28px] font-medium">
                 Wizualizacje
               </h1>
@@ -100,7 +116,12 @@
               href="#"
               class="flex flex-col rounded-[28px] border border-primary bg-white px-10 py-12 transition-colors hover:bg-gray"
             >
-              <img src="/assets/stars.png" height="40px" width="40px" alt="stars icon" />
+              <img
+                src="/assets/stars.png"
+                height="40px"
+                width="40px"
+                alt="stars icon"
+              />
               <h1 class="mt-8 font-montserrat text-[28px] font-medium">
                 Realizacje
               </h1>
@@ -138,8 +159,84 @@
       </div>
     </nav>
 
-
-
+    <!-- HERO -->
+    <main class="relative overflow-hidden">
+      <div
+        id="slider"
+        class="flex h-[calc(100vh-88px)] transition-all duration-500 md:h-[46rem]"
+      >
+        <div
+          class="grid h-full w-full flex-shrink-0 gap-6 bg-primary md:grid-cols-2 md:gap-16"
+        >
+          <div class="flex flex-col justify-center px-6 lg:pl-[90px]">
+            <h1
+              class="mt-4 font-montserrat text-4xl font-medium transition sm:text-5xl md:mt-0 md:text-6xl md:leading-[70px]"
+            >
+              Nowoczesna aranżacja Twojego ogrodu
+            </h1>
+            <p class="mt-4 md:mt-11">
+              Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
+              realizacji. Oferujemy kompleksowy zakres usług z indywidualnym
+              podejściem do każdego projektu.
+            </p>
+            <div
+              class="mt-4 flex flex-col gap-2 md:mt-[72px] md:flex-row md:gap-9"
+            >
+              <button
+                class="button rounded-full bg-secondary text-white transition-colors hover:bg-green-800"
+              >
+                Skontaktuj się z nami
+              </button>
+              <button
+                class="button inline-flex items-center justify-center gap-2 border border-secondary text-secondary transition-colors hover:bg-green-400/10 md:justify-normal"
+              >
+                Zobacz nasze realizacje
+                <img src="/assets/DownArrow.svg" alt="BottomArrow icon" />
+              </button>
+            </div>
+          </div>
+          <div class="h-full overflow-hidden">
+            <img
+              src="/assets/slider1.jpg"
+              alt="sliderphoto"
+              class="h-full w-full -scale-x-100 object-cover"
+            />
+          </div>
+        </div>
+        <div
+          class="flex h-full w-full flex-shrink-0 items-center justify-center bg-secondary"
+        >
+          <h1 class="text-5xl text-white">SLIDE 2</h1>
+        </div>
+        <div
+          class="flex h-full w-full flex-shrink-0 items-center justify-center bg-slate-300"
+        >
+          <h1 class="text-5xl">SLIDE 3</h1>
+        </div>
+      </div>
+      <div class="absolute bottom-0 right-0 z-10 flex bg-gray">
+        <button
+          id="prevButton"
+          class="flex items-center justify-center py-6 pl-8 pr-4 transition-colors hover:bg-white"
+        >
+          <img
+            src="/assets/BigLeftArrow.svg"
+            alt="LeftArrow icon"
+            class="h-12 w-12 p-3"
+          />
+        </button>
+        <button
+          id="nextButton"
+          class="flex items-center justify-center py-6 pl-4 pr-8 transition-colors hover:bg-white"
+        >
+          <img
+            src="/assets/BigRightArrow.svg"
+            alt="RightArrow icon"
+            class="h-12 w-12 p-3"
+          />
+        </button>
+      </div>
+    </main>
 
     <script type="module" src="/main.js"></script>
   </body>

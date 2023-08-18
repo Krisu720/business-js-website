@@ -18,5 +18,9 @@ html {
 }
 
 .underline-animation {
-  @apply relative before:transition-all before:rounded-3xl before:duration-200 before:w-0 before:h-0.5 group-hover:before:w-full before:absolute before:-bottom-1 before:bg-secondary before:content-[''];
+  @apply relative before:absolute before:-bottom-1 before:h-0.5 before:w-0 before:rounded-3xl before:bg-secondary before:transition-all before:duration-200 before:content-[''] group-hover:before:w-full;
+}
+
+.button {
+  @apply rounded-full px-3 py-2 text-sm font-normal lg:px-6 lg:pb-3.5 lg:pt-3 lg:text-base;
 }
