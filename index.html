@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/index.css" />
+
+    <title>giarddesign</title>
+  </head>
+  <body class="font-inter">
+    <!-- MOBILE NAVBAR -->
+    <div
+      id="mobilemenu"
+      data-show="false"
+      class="fixed bottom-0 right-0 top-0 z-20 flex h-screen w-full max-w-sm translate-x-full flex-col items-center justify-center gap-6 bg-gray px-2 shadow-md transition-all duration-300 data-[show=true]:translate-x-0"
+    >
+      <button id="closemenubutton" class="absolute right-6 top-6 p-2 hover:bg-white rounded-full">
+        <img src="/assets/x.svg" alt="closeicon" class="h-6 w-6" />
+      </button>
+      <h1 class="text-xs text-secondary">Oferta</h1>
+      <a href="#" class="underline-animation hover:before:w-full">Projekty</a>
+      <a href="#" class="underline-animation hover:before:w-full"
+        >Wizualizacje</a
+      >
+      <a href="#" class="underline-animation hover:before:w-full">Realizacje</a>
+      <hr class="w-2/3" />
+      <a href="#about" class="underline-animation hover:before:w-full"
+        >O firmie</a
+      >
+      <a href="#realizacje" class="underline-animation hover:before:w-full"
+        >Realizacje</a
+      >
+      <a href="#contact" class="underline-animation hover:before:w-full"
+        >Kontakt</a
+      >
+      <div class="mt-6 flex gap-2 rounded border-2 border-secondary">
+        <input
+          type="text"
+          placeholder="Wyszukaj"
+          class="w-full bg-transparent p-2 focus:outline-none"
+        />
+        <img src="assets/SearchIcon.svg" alt="searchicon" class="pr-2" />
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav
+      class="flex items-center justify-between px-6 py-6 md:py-0 lg:px-[90px]"
+    >
+      <img src="/assets/logo.png" alt="giarddesign logo" />
+
+      <button id="togglemenubutton" class="md:hidden p-2 hover:bg-gray rounded-full">
+        <img src="/assets/list.svg" alt="hamburgericon" class="h-6 w-6" />
+      </button>
+
+      <div class="hidden items-center gap-4 transition-all md:flex lg:gap-12">
+        <div
+          href="#oferta"
+          class="group inline-flex cursor-pointer items-center gap-[5px] py-6"
+        >
+          Oferta
+          <img
+            src="/assets/ChevronBottom.svg"
+            alt=""
+            class="transition-transform group-hover:rotate-180"
+          />
+
+          <!-- OFERTA MENU -->
+          <div
+            class="absolute right-0 top-[72px] z-10 hidden w-full animate-slide_bottom cursor-auto gap-6 rounded-b-3xl border-t border-gray bg-white p-6 shadow-xl group-hover:grid grid-cols-3"
+          >
+            <a
+              href="#"
+              class="flex flex-col rounded-[28px] border border-primary bg-white px-10 py-12 transition-colors hover:bg-gray"
+            >
+              <img src="/assets/pen.png" height="40px" width="40px" alt="pen icon" />
+              <h1 class="mt-8 font-montserrat text-[28px] font-medium">
+                Projekty
+              </h1>
+              <p class="mt-3 text-sm">
+                Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym
+                wykorzystaniem istniejącej przestrzeni.
+              </p>
+            </a>
+            <a
+              href="#"
+              class="flex flex-col rounded-[28px] border border-primary bg-white px-10 py-12 transition-colors hover:bg-gray"
+            >
+              <img src="/assets/eye.png" height="40px" width="40px" alt="eye icon" />
+              <h1 class="mt-8 font-montserrat text-[28px] font-medium">
+                Wizualizacje
+              </h1>
+              <p class="mt-3 text-sm">
+                Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego
+                spaceru animowanego w technologii 3D.
+              </p>
+            </a>
+            <a
+              href="#"
+              class="flex flex-col rounded-[28px] border border-primary bg-white px-10 py-12 transition-colors hover:bg-gray"
+            >
+              <img src="/assets/stars.png" height="40px" width="40px" alt="stars icon" />
+              <h1 class="mt-8 font-montserrat text-[28px] font-medium">
+                Realizacje
+              </h1>
+              <p class="mt-3 text-sm">
+                Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i
+                zaawansowanych technologii.
+              </p>
+            </a>
+          </div>
+        </div>
+        <a href="#about" class="underline-animation hover:before:w-full">
+          O firmie
+        </a>
+        <a href="#realizacje" class="underline-animation hover:before:w-full">
+          Realizacje
+        </a>
+        <a href="#kontakt" class="underline-animation hover:before:w-full">
+          Kontakt
+        </a>
+        <div class="group flex items-center rounded-xl px-2 py-2">
+          <input
+            id="searchinput"
+            type="text"
+            placeholder="Wyszukaj"
+            data-show="false"
+            class="peer relative z-10 mr-0 w-0 rounded px-0 py-0 outline-none ring-secondary transition-all focus:ring data-[show=true]:mr-2 data-[show=true]:w-32 data-[show=true]:px-2 data-[show=true]:py-1"
+          />
+          <button
+            id="searchtoggle"
+            class="cursor-pointer rounded-full transition-opacity hover:opacity-60"
+          >
+            <img src="/assets/SearchIcon.svg" alt="search icon" />
+          </button>
+        </div>
+      </div>
+    </nav>
+
+
+
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

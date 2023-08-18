@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  :root {
+    --beige: #dcc1ab;
+    --black: #111111;
+    --green: #1b5b31;
+    --gray: #f5f0ec;
+  }
+}
+
+.underline-animation {
+  @apply relative before:transition-all before:rounded-3xl before:duration-200 before:w-0 before:h-0.5 group-hover:before:w-full before:absolute before:-bottom-1 before:bg-secondary before:content-[''];
+}
