@@ -13,11 +13,11 @@
     <div
       id="mobilemenu"
       data-show="false"
-      class="fixed bottom-0 right-0 top-0 z-20 flex h-screen w-full max-w-sm translate-x-full flex-col items-center justify-center gap-6 bg-gray px-2 shadow-md transition-all duration-300 data-[show=true]:translate-x-0"
+      class="fixed bottom-0 right-0 top-0 z-20 flex h-screen w-full max-w-xs translate-x-full flex-col items-center justify-center gap-6 bg-white px-2 shadow-md transition-all duration-300 data-[show=true]:translate-x-0"
     >
       <button
         id="closemenubutton"
-        class="absolute right-6 top-6 rounded-full p-2 hover:bg-white"
+        class="absolute right-6 top-6 rounded-full p-2 hover:bg-gray"
       >
         <img src="/assets/x.svg" alt="closeicon" class="h-6 w-6" />
       </button>
@@ -385,6 +385,61 @@
       </button>
     </div>
   </section>
+
+  <!-- KONTAKT -->
+
+  <section id="kontakt" class="bg-gray px-6 py-[60px] md:px-16 lg:px-[200px]">
+    <div class="flex justify-between flex-col gap-16 bg-secondary px-6 py-16 lg:py-[120px] text-gray lg:flex-row lg:px-[110px]">
+      <div class="flex flex-col justify-end">
+
+        <h1 class="font-montserrat text-3xl lg:text-[40px] -tracking-[2px] leading-[48px]">
+          Zostańmy w kontakcie!<br class="hidden sm:block"/>
+          Znajdziesz nas na
+          <span class="font-inter font-medium italic tracking-[1px]">Instagramie</span>.
+        </div>
+      </h1>
+      <div class=" -tracking-[0.16px]">
+        <p>Śledź nasze najnowsze realizacje!</p>
+        <button class="button transition-opacity hover:opacity-80 mt-6 rounded-full bg-gray text-sm text-secondary">
+          Instagram
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer class="bg-black px-6 py-20 text-gray xl:px-[200px]">
+    <div class="flex flex-col items-center justify-between gap-6 lg:flex-row">
+      <img src="/assets/GiardDesignLight.svg" alt="giarddesign logo" />
+      <div class="flex items-center gap-6">
+        <h1>Daj znać, co możemy dla Ciebie zrobić!</h1>
+        <button class="button hover:opacity-80 transition-opacity rounded-full bg-secondary">
+          Skontaktuj się z nami
+        </button>
+      </div>
+    </div>
+    <hr class="my-16 h-[0.25px] w-full bg-gray"/>
+    <div class="flex flex-col items-center justify-between gap-6 lg:flex-row">
+      <div class="flex gap-6 lg:gap-12">
+        <a href="#" class="underline-animation hover:before:w-full">Kontakt</a>
+        <a href="#" class="underline-animation hover:before:w-full">Instagram</a>
+        <a href="#" class="underline-animation hover:before:w-full">Facebook</a>
+        <a href="#" class="underline-animation hover:before:w-full">LinkedIn</a>
+      </div>
+      <div class="flex gap-6  lg:gap-12">
+        <a href="#" class="underline-animation hover:before:w-full">000-000-000</a>
+        <a href="#" class="underline-animation hover:before:w-full">giarddesign@kontakt.pl</a>
+      </div>
+    </div>
+    <div class="mt-[120px] flex flex-col items-center justify-between gap-6 lg:flex-row">
+      <p>Prawa zastrzeżone © 2022</p>
+      <div class="flex gap-4">
+        <p>made by</p>
+        <img src="/assets/adRespect.svg" alt="adRespect logo" />
+      </div>
+    </div>
+  </footer>
 
     <script type="module" src="/main.js"></script>
   </body>
