@@ -16,6 +16,14 @@ export const setupNavbar = ({
     }
   };
 
+  for (const item of mobileMenu.children) {
+    if (item.nodeName === "A") {
+      item.addEventListener("click", () => {
+        mobileMenu.setAttribute("data-show", "false");
+      });
+    }
+  }
+
   window.addEventListener("resize", (e) => {
     if (window.innerWidth > 768) {
       mobileMenu.setAttribute("data-show", "false");
