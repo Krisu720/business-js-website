@@ -1,4 +1,7 @@
-export const setupCards = ({ cards }) => {
+import { gsap } from "gsap";
+
+export const setupOffer = ({ cards }) => {
+
   const handleMouseMove = (e) => {
     const { currentTarget: target } = e;
 
@@ -13,4 +16,15 @@ export const setupCards = ({ cards }) => {
   for (const card of cards) {
     card.onmousemove = (e) => handleMouseMove(e);
   }
+  
+  gsap.from(".gsap-offer-slide", {
+    scrollTrigger: {
+      trigger: "#oferta",
+      start: "top center",
+    },
+    y: 50,
+    opacity: 0,
+    stagger: 0.12,
+  });
+
 };

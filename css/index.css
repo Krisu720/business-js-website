@@ -48,5 +48,7 @@ html {
 }
 
 .masonry-grid-item {
-  @apply w-[49%] md:w-[32%] mb-4 md:mb-8 cursor-pointer
+  @apply w-[49%] md:w-[32%] mb-4 md:mb-8 cursor-pointer overflow-hidden
 }
+
+

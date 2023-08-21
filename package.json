@@ -17,7 +17,10 @@
     "vite": "^4.4.5"
   },
   "dependencies": {
+    "gsap": "^3.12.2",
+    "imagesloaded": "^5.0.0",
     "masonry-layout": "^4.2.2",
-    "photoswipe": "^5.3.8"
+    "photoswipe": "^5.3.8",
+    "split-type": "^0.3.3"
   }
 }

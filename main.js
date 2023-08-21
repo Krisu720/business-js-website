@@ -1,8 +1,14 @@
-import { setupLoader } from "./js/loader";
+import { gsap } from "gsap";
 import { setupNavbar } from "./js/navbar";
-import { setupCards } from "./js/offer";
+import { setupOffer } from "./js/offer";
 import { setupSlider } from "./js/slider";
 import { setupRealizations } from "./js/realizations";
+import { ScrollTrigger } from "gsap/all";
+import { setupLoader } from "./js/loader";
+import { setupAbout } from "./js/about";
+import { setupContact } from "./js/contact";
+
+gsap.registerPlugin(ScrollTrigger);
 
 setupNavbar({
   toggleMenu: document.getElementById("togglemenubutton"),
@@ -10,6 +16,8 @@ setupNavbar({
   mobileMenu: document.getElementById("mobilemenu"),
   searchToggle: document.getElementById("searchtoggle"),
   searchInput: document.getElementById("searchinput"),
+  subMenu: document.getElementById("submenu"),
+  subMenuButton:document.getElementById("submenubutton"),
 });
 
 setupSlider({
@@ -18,7 +26,7 @@ setupSlider({
   slider: document.getElementById("slider"),
 });
 
-setupCards({ cards: document.querySelectorAll(".gloweffect") });
+setupOffer({ cards: document.querySelectorAll(".gloweffect") });
 
 setupLoader({ loader: document.getElementById("loader") });
 
@@ -28,3 +36,14 @@ setupRealizations({
   expandButton: document.getElementById("expandbutton"),
   expandLayout: document.getElementById("expandlayout"),
 });
+
+setupAbout()
+setupContact()
+
+
+
+
+
+
+
+

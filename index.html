@@ -2,49 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+    name="description"
+    content="Strona firmy ogrodniczej z usługami.">
     <link rel="stylesheet" href="/css/index.css" />
     <title>giarddesign</title>
   </head>
-  <body class="font-inter">
+  <body class="font-inter antialiased">
     <!-- LOADER -->
-
-    <div
-    id="loader"
-    class="fixed z-50 inset-0 bg-white flex items-center justify-center transition-all"
-  >
-    <img src="/assets/logo.png" alt="giarddesign logo" class="animate-pulse duration-75"/>
-  </div>
+    <div id="loader" class="fixed z-[100] inset-0 bg-white flex items-center justify-center">
+      <img src="/assets/logo.png" alt="giarddesign logo" class="animate-pulse duration-75"/>
+    </div>
     <!-- MOBILE NAVBAR -->
     <div
       id="mobilemenu"
       data-show="false"
-      class="fixed bottom-0 right-0 top-0 z-20 flex h-screen w-full max-w-lg translate-x-full flex-col items-center justify-center gap-6 bg-white px-2 shadow-md transition-all duration-300 data-[show=true]:translate-x-0"
+      class="fixed bottom-0 right-0 pt-16 top-0 z-[99] flex h-screen w-full max-w-lg translate-x-full flex-col bg-white px-2 shadow-md transition-all duration-300 data-[show=true]:translate-x-0"
     >
+    <div class="flex flex-col items-end gap-6">
+
       <button
         id="closemenubutton"
         class="absolute right-6 top-6 rounded-full p-2 hover:bg-gray"
       >
         <img src="/assets/x.svg" alt="closeicon" class="h-6 w-6" />
       </button>
-      <h1 class="text-xs text-secondary">Oferta</h1>
-      <a href="#" class="underline-animation hover:before:w-full">Projekty</a>
-      <a href="#" class="underline-animation hover:before:w-full"
-        >Wizualizacje</a
-      >
-      <a href="#" class="underline-animation hover:before:w-full">Realizacje</a>
-      <hr class="w-2/3" />
-      <a href="#about" class="underline-animation hover:before:w-full"
-        >O firmie</a
-      >
-      <a href="#realizacje" class="underline-animation hover:before:w-full"
-        >Realizacje</a
-      >
-      <a href="#kontakt" class="underline-animation hover:before:w-full"
-        >Kontakt</a
-      >
-      <div class="mt-6 flex gap-2 rounded border-2 border-secondary">
+      <div class="mt-6 flex gap-2 rounded border-2 border-secondary w-full">
         <input
           type="text"
           placeholder="Wyszukaj"
@@ -52,109 +37,136 @@
         />
         <img src="assets/SearchIcon.svg" alt="searchicon" class="pr-2" />
       </div>
+      <!-- <h1 class="text-xs text-secondary">Oferta</h1> -->
+      <a href="#" class="hover:opacity-50 transition-opacity text-5xl font-extrabold tracking-tighter">Projekty</a>
+      <a href="#" class="hover:opacity-50 transition-opacity text-5xl font-extrabold tracking-tighter"
+        >Wizualizacje</a
+      >
+      <a href="#" class="hover:opacity-50 transition-opacity text-5xl font-extrabold tracking-tighter">Realizacje</a>
+      <a href="#about" class="hover:opacity-50 transition-opacity text-5xl font-extrabold tracking-tighter"
+        >O firmie</a
+      >
+      <a href="#realizacje" class="hover:opacity-50 transition-opacity text-5xl font-extrabold tracking-tighter"
+        >Realizacje</a
+      >
+      <a href="#kontakt" class="hover:opacity-50 transition-opacity text-5xl font-extrabold tracking-tighter"
+        >Kontakt</a
+      >
+    </div>
+    
     </div>
 
-    <!-- NAVBAR -->
-    <nav
-      class="flex items-center justify-between px-6 py-6 md:py-0 lg:px-[90px]"
+    <!-- NAVBAR SUBMENU -->
+
+    <div
+    id="submenu"
+    data-open="false"
+    class="fixed  right-0 top-[72px] px-6 z-50 data-[open=false]:hidden w-full animate-slide_bottom cursor-auto grid-cols-3 gap-6 rounded-b-3xl  bg-white p-6 shadow-xl data-[open=true]:grid"
+  >
+    <a
+      href="#oferta"
+      class="flex flex-col rounded-[28px] border border-primary bg-white px-10 py-12 transition-colors hover:bg-gray"
     >
-      <img src="/assets/logo.png" alt="giarddesign logo" />
+      <img
+        src="/assets/pen.png"
+        height="40px"
+        width="40px"
+        alt="pen icon"
+      />
+      <h1 class="mt-5 font-montserrat text-[28px] font-medium">
+        Projekty
+      </h1>
+      <p class="mt-3 text-sm">
+        Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym
+        wykorzystaniem istniejącej przestrzeni.
+      </p>
+    </a>
+    <a
+      href="#oferta"
+      class="flex flex-col rounded-[28px] border border-primary bg-white px-10 py-12 transition-colors hover:bg-gray"
+    >
+      <img
+      class="h-10 w-10 object-contain object-center"
+        src="/assets/eye.png"
+        height="40px"
+        width="40px"
+        alt="eye icon"
+      />
+      <h1 class="mt-5 font-montserrat text-[28px] font-medium">
+        Wizualizacje
+      </h1>
+      <p class="mt-3 text-sm">
+        Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego
+        spaceru animowanego w technologii 3D.
+      </p>
+    </a>
+    <a
+      href="#oferta"
+      class="flex flex-col rounded-[28px] border border-primary bg-white px-10 py-12 transition-colors hover:bg-gray"
+    >
+      <img
+        src="/assets/stars.png"
+        height="40px"
+        width="40px"
+        alt="stars icon"
+      />
+      <h1 class="mt-5 font-montserrat text-[28px] font-medium ">
+        Realizacje
+      </h1>
+      <p class="mt-3 text-sm">
+        Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i
+        zaawansowanych technologii.
+      </p>
+    </a>
+  </div>
+
+
+    <!-- NAVBAR -->
+    
+
+    <nav
+      class="flex items-center justify-between px-6 py-6 md:py-0 lg:px-[90px] sticky top-0 z-50 bg-white"
+    >
+    <a href="#" class="gsap-logo">
+      <img class="hover:opacity-50 transition-opacity " src="/assets/logo.svg" alt="giarddesign logo" />
+    </a>
 
       <button
         id="togglemenubutton"
-        class="rounded-full p-2 hover:bg-gray md:hidden"
+        class="gsap-menu rounded-full p-2 hover:bg-gray md:hidden"
       >
         <img src="/assets/list.svg" alt="hamburgericon" class="h-6 w-6" />
       </button>
 
       <div class="hidden items-center gap-4 transition-all md:flex lg:gap-12">
-        <div
+        <button
+          id="submenubutton"
           href="#oferta"
-          class="group inline-flex cursor-pointer items-center gap-[5px] py-6 -tracking-[0.14px]"
+          class="gsap-navs group inline-flex cursor-pointer items-center gap-[5px] py-6 -tracking-[0.14px] "
         >
           Oferta
           <img
             src="/assets/ChevronBottom.svg"
-            alt=""
+            alt="ChevronIcon"
             class="transition-transform group-hover:rotate-180"
           />
-
-          <!-- OFERTA MENU -->
-          <div
-            class="absolute right-0 top-[72px] z-10 hidden w-full animate-slide_bottom cursor-auto grid-cols-3 gap-6 rounded-b-3xl border-t border-gray bg-white p-6 shadow-xl group-hover:grid"
-          >
-            <a
-              href="#"
-              class="flex flex-col rounded-[28px] border border-primary bg-white px-10 py-12 transition-colors hover:bg-gray"
-            >
-              <img
-                src="/assets/pen.png"
-                height="40px"
-                width="40px"
-                alt="pen icon"
-              />
-              <h1 class="mt-8 font-montserrat text-[28px] font-medium">
-                Projekty
-              </h1>
-              <p class="mt-3 text-sm">
-                Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym
-                wykorzystaniem istniejącej przestrzeni.
-              </p>
-            </a>
-            <a
-              href="#"
-              class="flex flex-col rounded-[28px] border border-primary bg-white px-10 py-12 transition-colors hover:bg-gray"
-            >
-              <img
-                src="/assets/eye.png"
-                height="40px"
-                width="40px"
-                alt="eye icon"
-              />
-              <h1 class="mt-8 font-montserrat text-[28px] font-medium">
-                Wizualizacje
-              </h1>
-              <p class="mt-3 text-sm">
-                Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego
-                spaceru animowanego w technologii 3D.
-              </p>
-            </a>
-            <a
-              href="#"
-              class="flex flex-col rounded-[28px] border border-primary bg-white px-10 py-12 transition-colors hover:bg-gray"
-            >
-              <img
-                src="/assets/stars.png"
-                height="40px"
-                width="40px"
-                alt="stars icon"
-              />
-              <h1 class="mt-8 font-montserrat text-[28px] font-medium">
-                Realizacje
-              </h1>
-              <p class="mt-3 text-sm">
-                Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i
-                zaawansowanych technologii.
-              </p>
-            </a>
-          </div>
-        </div>
-        <a href="#about" class="underline-animation hover:before:w-full">
+        </button>
+        <a href="#about" class="gsap-navs underline-animation hover:before:w-full">
           O firmie
         </a>
-        <a href="#realizacje" class="underline-animation hover:before:w-full">
+        <a href="#realizacje" class="gsap-navs underline-animation hover:before:w-full">
           Realizacje
         </a>
-        <a href="#kontakt" class="underline-animation hover:before:w-full">
+        <a href="#kontakt" class="gsap-navs underline-animation hover:before:w-full">
           Kontakt
         </a>
-        <div class="group flex items-center rounded-xl px-2 py-2">
+        <div class="gsap-navs group flex items-center rounded-xl px-2 py-2">
           <input
             id="searchinput"
             type="text"
             placeholder="Wyszukaj"
             data-show="false"
-            class="peer relative z-10 mr-0 w-0 rounded px-0 py-0 outline-none ring-secondary transition-all focus:ring data-[show=true]:mr-2 data-[show=true]:w-32 data-[show=true]:px-2 data-[show=true]:py-1"
+            class="relative z-10 mr-0 w-0 rounded px-0 py-0 outline-none ring-secondary transition-all focus:ring data-[show=true]:mr-2 data-[show=true]:w-32 data-[show=true]:px-2 data-[show=true]:py-1"
           />
           <button
             id="searchtoggle"
@@ -177,32 +189,34 @@
         >
           <div class="flex flex-col justify-center px-6 py-6 lg:pl-[90px]">
             <h1
-              class="mt-4 font-montserrat text-4xl font-medium transition sm:text-5xl md:mt-0 md:text-6xl md:leading-[70px]"
+              class="gsap-slideup mt-4 font-montserrat text-4xl font-medium  sm:text-5xl md:mt-0 md:text-6xl md:leading-[70px]"
             >
               Nowoczesna aranżacja <br class="hidden md:block" />Twojego ogrodu
             </h1>
-            <p class="mt-4 md:mt-11">
+            <p class="gsap-slideup mt-4 md:mt-11">
               Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
               realizacji. Oferujemy kompleksowy zakres usług z indywidualnym
               podejściem do każdego projektu.
             </p>
             <div
-              class="mt-4 flex flex-col gap-2 md:mt-[72px] md:flex-row md:gap-9"
+              class="gsap-slideup mt-4 flex flex-col gap-2 md:mt-[72px] md:flex-row md:gap-9"
             >
-              <button
-                class="button rounded-full bg-secondary text-white transition-colors hover:bg-green-800"
+              <a
+              href="mailto:example@example.com"
+                class="button rounded-full bg-secondary text-white transition-opacity hover:opacity-75 inline-flex justify-center text-center"
               >
                 Skontaktuj się z nami
-              </button>
-              <button
-                class="button inline-flex items-center justify-center gap-2 border border-secondary text-secondary transition-colors hover:bg-green-400/10 md:justify-normal"
+              </a>
+              <a
+              href="#realizacje"
+                class="button inline-flex items-center justify-center text-center gap-2 border border-secondary text-secondary hover:bg-gray hover:border-gray transition-colors md:justify-normal"
               >
                 Zobacz nasze realizacje
                 <img src="/assets/DownArrow.svg" alt="BottomArrow icon" />
-              </button>
+              </a>
             </div>
           </div>
-          <div class="h-full overflow-hidden">
+          <div class="gsap-slideup h-full overflow-hidden">
             <img
               src="/assets/slider1.jpg"
               alt="sliderphoto"
@@ -221,7 +235,7 @@
           <h1 class="text-5xl">SLIDE 3</h1>
         </div>
       </div>
-      <div class="absolute bottom-0 right-0 z-10 flex bg-gray">
+      <div class="gsap-slideup absolute bottom-0 right-0 z-10 flex bg-gray">
         <button
           id="prevButton"
           class="flex items-center justify-center py-3 pl-4 pr-2 md:py-6 md:pl-8 md:pr-4 transition-colors hover:bg-white"
@@ -249,13 +263,13 @@
 
     <section id="oferta" class="bg-gray py-[120px] pb-40">
       <div class="px-6 md:max-w-6xl md:px-24 lg:px-[200px]">
-        <p class="text-xs text-secondary -tracking-[0.12px]">Oferta</p>
+        <p class="gsap-offer-slide text-xs text-secondary -tracking-[0.12px]">Oferta</p>
         <h1
-          class="mt-4 font-montserrat text-5xl font-medium -tracking-[1.44px]"
+          class="gsap-offer-slide mt-4 font-montserrat text-5xl font-medium -tracking-[1.44px]"
         >
           Działamy <span class="font-inter italic tracking-normal"> kompleksowo</span>
         </h1>
-        <p class="mt-8 -tracking-[0.16px]">
+        <p class="gsap-offer-slide mt-8 -tracking-[0.16px]">
           Oferujemy kompletną obsługę inwestycji terenów zielonych. Projektujemy
           nowoczesne ogrody przydomowe oraz rezydencjonalne. Stworzymy dla
           Ciebie projekt, zwizualizujemy go i wcielimy w życie, a na każdym
@@ -268,7 +282,7 @@
       >
         <a
         href="#"
-          class="relative gloweffect group flex h-[370px] min-w-[250px] flex-1 flex-col rounded-[28px] bg-white px-10 py-12 items-start"
+          class="gsap-offer-slide relative gloweffect group flex h-[370px] min-w-[250px] flex-1 flex-col rounded-[28px] bg-white px-10 py-12 items-start"
         >
           <img
             src="/assets/pen.png"
@@ -284,27 +298,28 @@
             Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym
             wykorzystaniem istniejącej przestrzeni.
           </p>
-          <span
+          <h1
             class="underline-animation mt-auto inline-flex gap-2.5 text-secondary"
           >
             Dowiedz się więcej
             <img
               src="/assets/RightArrow.svg"
-              alt=""
+              alt="Arrow icon"
               class="transition-transform duration-300 group-hover:-rotate-45"
             />
-          </span>
+          </h1>
         </a>
         <a
         href="#"
-          class="relative gloweffect group flex h-[370px] min-w-[250px] flex-1 flex-col rounded-[28px] bg-white px-10 py-12 items-start"
+          class="gsap-offer-slide relative gloweffect group flex h-[370px] min-w-[250px] flex-1 flex-col rounded-[28px] bg-white px-10 py-12 items-start"
         >
-          <div class="flex h-10 w-10 items-center">
             <img
               src="/assets/eye.png"
               alt="eye icon"
+              class="h-10 w-10 object-contain"
+              height="40px"
+              width="40px"
             />
-          </div>
           <h1
             class="mt-8 font-montserrat text-[28px] font-medium -tracking-[1.4px]"
           >
@@ -315,20 +330,20 @@
             animowanego w technologii 3D.
           </p>
 
-          <span
+          <h1
             class="underline-animation mt-auto inline-flex gap-2.5 text-secondary"
           >
             Dowiedz się więcej
             <img
               class="transition-transform duration-300 group-hover:-rotate-45"
               src="/assets/RightArrow.svg"
-              alt=""
+              alt="Arrow icon"
             />
-          </span>
+          </h1>
         </a>
         <a
         href="#"
-          class="relative gloweffect group flex h-[370px] min-w-[250px] flex-1 flex-col rounded-[28px] bg-white px-10 py-12 items-start"
+          class="gsap-offer-slide relative gloweffect group flex h-[370px] min-w-[250px] flex-1 flex-col rounded-[28px] bg-white px-10 py-12 items-start"
         >
           <img
             src="/assets/stars.png"
@@ -345,16 +360,16 @@
             zaawansowanych technologii.
           </p>
 
-          <span
+          <h1
             class="underline-animation mt-auto inline-flex gap-2.5 text-secondary"
           >
             Dowiedz się więcej
             <img
               class="transition-transform duration-300 group-hover:-rotate-45"
               src="/assets/RightArrow.svg"
-              alt=""
+              alt="Arrow icon"
             />
-          </span>
+          </h1>
         </a>
       </div>
     </section>
@@ -366,19 +381,19 @@
     id="about"
     class="grid md:h-[45rem] gap-8 bg-secondary md:grid-cols-2 md:gap-16"
   >
-    <div class="h-full overflow-hidden">
+    <div class=" h-full overflow-hidden">
       <img
         src="/assets/house.jpg"
         alt="sliderphoto"
-        class="h-full w-full -scale-x-100 object-cover"
+        class="gsap-about-slideright h-full w-full -scale-x-100 object-cover"
       />
     </div>
     <div class="flex h-full  flex-col items-start justify-center py-12 px-6 md:pr-6 xl:pl-24  md:px-0">
-      <p class="text-xs text-gray -tracking-[0.12px]">O firmie</p>
-      <h1 class="mt-4 font-montserrat text-5xl font-medium text-gray md:text-6xl md:leading-[70px] -tracking-[1.44px]">
+      <p class="gsap-about-slideleft text-xs text-gray -tracking-[0.12px]">O firmie</p>
+      <h1 class="gsap-about-slideleft mt-4 font-montserrat text-5xl font-medium text-gray md:text-6xl md:leading-[70px] -tracking-[1.44px]">
         Tworzymy<br class="hidden md:block"/> z <span class="font-inter italic tracking-normal"> pasją</span>
       </h1>
-      <p class="mt-6 text-gray md:mt-11 -tracking-[0.16px]">
+      <p class="gsap-about-slideleft mt-6 text-gray md:mt-11 -tracking-[0.16px]">
         Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą
         wykwalifikowani projektanci oraz architekci, których zadaniem jest
         rozpoznanie i realizacja potrzeb każdego Klienta. Nasza specjalizacja
@@ -386,7 +401,7 @@
         i elegancka prostota. Tworzymy ogrody małoobsługowe, dostosowane do
         współczesnego trybu życia.
       </p>
-      <button class="button my-6 inline-flex items-center gap-2 rounded-full border border-gray text-gray md:mt-[72px]">
+      <button class="gsap-about-slideleft button my-6 inline-flex items-center gap-2 rounded-full transition-colors hover:bg-green-700 hover:border-green-700 border border-gray text-gray md:mt-[72px]">
         Poznaj nas bliżej
         <img src="assets/RightArrowWhite.svg" alt="rightarrow icon">
       </button>
@@ -395,97 +410,88 @@
 
   <!-- REALIZACJE -->
 
-  <section data-expanded="false" id="realizacje" class="bg-primary pt-[120px]  data-[expanded=false]:h-[60rem] data-[expanded=false]:md:h-[94rem] relative overflow-hidden transition-all">
+  <section data-expanded="false" id="realizacje" class="bg-primary pt-[120px] max-h-[150rem] data-[expanded=false]:max-h-[60rem] data-[expanded=false]:md:max-h-[70rem] data-[expanded=false]:lg:max-h-[94rem] h-full relative overflow-hidden duration-1000 transition-all">
     <div class="px-16 lg:px-[160px]">
-      <p class="text-xs text-secondary -tracking-[0.12px]">Realizacje</p>
-      <h1 class="mt-4 font-montserrat text-5xl font-medium -tracking-[1.44px]">
+      <p class="gsap-realizations-slide text-xs text-secondary -tracking-[0.12px]">Realizacje</p>
+      <h1 class="gsap-realizations-slide mt-4 font-montserrat text-5xl font-medium -tracking-[1.44px]">
         Nasze <span class="font-inter italic tracking-normal"> projekty</span>
       </h1>
     </div>
     <div id="expandlayout" class="absolute bottom-0 right-0 left-0 bg-gradient-to-t from-primary to-transparent z-10 h-[16rem] md:h-[50rem] w-full flex justify-center items-end py-24">
-      <button id="expandbutton" class="button border inline-flex gap-2 items-center hover:bg-gray transition-colors">Rozwiń <img src="/assets/BottomArrow.svg" alt=""></button>
+      <button id="expandbutton" class="button border inline-flex gap-2 items-center hover:bg-white hover:border-white hover:px-12 transition-all">Rozwiń <img src="/assets/BottomArrow.svg" alt="Arrow icon"></button>
     </div>
     <div id="masonry-grid" class="mt-24">
       <div class="masonry-gutter w-[2%]"></div>
       <a 
-      target="_blank"
-      data-pswp-src="https://utfs.io/f/a37d161e-ba2c-48d9-a386-eaa3854ad0d2_1.jpg"
+      href="./assets/mansory/1.webp"
       data-pswp-width="4096" 
       data-pswp-height="3072" 
-      class="masonry-grid-item">
+      class="masonry-grid-item group hover:ring ring-secondary transition-all">
 
-        <img src="assets/mansory/1.jpg" />
+        <img class="" src="assets/mansory/1lowres.webp" alt="masonry-1"/>
       </a>
       <a 
-      target="_blank"
-      data-pswp-src="https://utfs.io/f/903c8eac-912a-4c91-a20c-ceebb4baf63e_2.jpg"
+      href="./assets/mansory/2.webp"
       data-pswp-width="4096" 
       data-pswp-height="2731" 
-      class="masonry-grid-item">
+      class="masonry-grid-item group hover:ring ring-secondary transition-all">
 
-        <img src="assets/mansory/2.jpg" />
+        <img class="" src="assets/mansory/2lowres.webp" alt="masonry-2"/>
       </a>
       <a 
-      target="_blank"
-      data-pswp-src="https://utfs.io/f/cbaad182-9768-4f12-8434-527fd383d7b4_3.jpg"
+      href="./assets/mansory/3.webp"
       data-pswp-width="2651" 
       data-pswp-height="3536" 
-      class="masonry-grid-item cursor-pointer">
-      <img src="assets/mansory/3.jpg" >
+      class="masonry-grid-item group hover:ring ring-secondary transition-all">
+      <img class="" src="assets/mansory/3lowres.webp" alt="masonry-3"/>
       
     </a>
       <a 
-      target="_blank"
-      data-pswp-src="https://utfs.io/f/41e36b2d-a360-4f3e-aa36-1586f213f88b_5.jpg"
+      href="./assets/mansory/5.webp"
       data-pswp-width="4096" 
       data-pswp-height="2731" 
-      class="masonry-grid-item cursor-pointer">
-      <img src="assets/mansory/5.jpg" >
+      class="masonry-grid-item group hover:ring ring-secondary transition-all">
+      <img class="" src="assets/mansory/5lowres.webp" alt="masonry-4"/>
      
     </a>
       <a 
-      target="_blank"
-      data-pswp-src="https://utfs.io/f/87e89601-d599-4468-b460-b5e7d2b00799_4.jpg"
+      href="./assets/mansory/4.webp"
       data-pswp-width="3072" 
       data-pswp-height="4096" 
-      class="masonry-grid-item cursor-pointer">
-      <img src="assets/mansory/4.jpg" >
+      class="masonry-grid-item group hover:ring ring-secondary transition-all">
+      <img class="" src="assets/mansory/4lowres.webp" alt="masonry-5"/>
      
     </a>
       <a 
-      target="_blank"
-      data-pswp-src="https://utfs.io/f/13f0f6b2-a9c4-4dbe-9473-21c674a2f060_6.jpg"
+      href="./assets/mansory/6.webp"
       data-pswp-width="2731" 
       data-pswp-height="4096" 
-      class="masonry-grid-item cursor-pointer">
-      <img src="assets/mansory/6.jpg" >
+      class="masonry-grid-item group hover:ring ring-secondary transition-all">
+      <img class="" src="assets/mansory/6lowres.webp" alt="masonry-6" />
      
     </a>
       <a 
-      target="_blank"
-      data-pswp-src="https://utfs.io/f/5d594f15-c272-4726-891f-783b4f3f785f_7.jpg"
+      href="./assets/mansory/7.webp"
       data-pswp-width="4096" 
       data-pswp-height="2731" 
-      class="masonry-grid-item cursor-pointer">
-      <img src="assets/mansory/7.jpg" >
+      class="masonry-grid-item group hover:ring ring-secondary transition-all">
+      <img class="" src="assets/mansory/7lowres.webp" alt="masonry-7" />
      
     </a>
       <a 
-      target="_blank"
-      data-pswp-src="https://utfs.io/f/f0e92490-4abe-4835-ac1d-398b39e77432_8.jpg"
+      href="./assets/mansory/8.webp"
       data-pswp-width="3024" 
       data-pswp-height="4032" 
-      class="masonry-grid-item cursor-pointer">
-      <img src="assets/mansory/8.jpg" >
+      class="masonry-grid-item group hover:ring ring-secondary transition-all">
+      <img class="" src="assets/mansory/8lowres.webp" alt="masonry-8" />
       
     </a>
       <a 
-      target="_blank"
-      data-pswp-src="https://utfs.io/f/1c360e92-9c68-4215-9a49-9a2515523411_9.jpg"
+      href="./assets/mansory/9.webp"
       data-pswp-width="3330" 
       data-pswp-height="2232" 
-      class="masonry-grid-item cursor-pointer">
-      <img src="assets/mansory/9.jpg" >
+      class="masonry-grid-item group hover:ring ring-secondary transition-all">
+      <img class="" src="assets/mansory/9lowres.webp" alt="masonry-9" />
      
     </a>
     </div>
@@ -497,13 +503,13 @@
     <div class="flex justify-between flex-col gap-16 bg-secondary px-6 py-16 lg:py-[120px] text-gray lg:flex-row lg:px-[110px]">
       <div class="flex flex-col justify-end">
 
-        <h1 class="font-montserrat text-3xl lg:text-[40px] -tracking-[2px] leading-[48px]">
+        <h1 class="gsap-contact-slideright font-montserrat text-3xl lg:text-[40px] -tracking-[2px] leading-[48px]">
           Zostańmy w kontakcie!<br class="hidden sm:block"/>
           Znajdziesz nas na
           <span class="font-inter font-medium italic tracking-[1px]">Instagramie</span>.
         </div>
       </h1>
-      <div class=" -tracking-[0.16px]">
+      <div class="gsap-contact-slideleft -tracking-[0.16px]">
         <p>Śledź nasze najnowsze realizacje!</p>
         <button class="button transition-opacity hover:opacity-80 mt-6 rounded-full bg-gray text-sm text-secondary">
           Instagram
@@ -519,30 +525,30 @@
       <img src="/assets/GiardDesignLight.svg" alt="giarddesign logo" />
       <div class="flex items-center gap-6">
         <h1>Daj znać, co możemy dla Ciebie zrobić!</h1>
-        <button class="button hover:opacity-80 transition-opacity rounded-full bg-secondary">
+        <a  href="mailto:example@example.com" class="button hover:opacity-80 transition-opacity rounded-full bg-secondary">
           Skontaktuj się z nami
-        </button>
+        </a>
       </div>
     </div>
     <hr class="my-16 h-[0.25px] w-full bg-gray"/>
     <div class="flex flex-col items-center justify-between gap-6 lg:flex-row">
       <div class="flex gap-6 lg:gap-12">
-        <a href="#" class="underline-animation hover:before:w-full">Kontakt</a>
-        <a href="#" class="underline-animation hover:before:w-full">Instagram</a>
-        <a href="#" class="underline-animation hover:before:w-full">Facebook</a>
-        <a href="#" class="underline-animation hover:before:w-full">LinkedIn</a>
+        <a href="#" class="hover:opacity-50 transition-opacity">Kontakt</a>
+        <a href="#" class="hover:opacity-50 transition-opacity">Instagram</a>
+        <a href="#" class="hover:opacity-50 transition-opacity">Facebook</a>
+        <a href="#" class="hover:opacity-50 transition-opacity">LinkedIn</a>
       </div>
       <div class="flex gap-6  lg:gap-12">
-        <a href="#" class="underline-animation hover:before:w-full">000-000-000</a>
-        <a href="#" class="underline-animation hover:before:w-full">giarddesign@kontakt.pl</a>
+        <a href="tel:123-456-789" class="hover:opacity-50 transition-opacity">000-000-000</a>
+        <a href="mailto:giarddesign@kontakt.pl" class="hover:opacity-50 transition-opacity">giarddesign@kontakt.pl</a>
       </div>
     </div>
     <div class="mt-[120px] flex flex-col items-center justify-between gap-6 lg:flex-row">
       <p>Prawa zastrzeżone © 2022</p>
-      <div class="flex gap-4">
+      <a target="_blank" href="https://adrespect.pl/" class="flex gap-4">
         <p>made by</p>
         <img src="/assets/adRespect.svg" alt="adRespect logo" />
-      </div>
+      </a>
     </div>
   </footer>
 
