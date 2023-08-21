@@ -1,7 +1,18 @@
 import { gsap } from "gsap";
+import Masonry from "masonry-layout";
+import imagesLoaded from 'imagesloaded'
 
-export const setupLoader = ({ loader }) => {
+export const setupLoader = ({ loader,masonryGrid }) => {
   window.addEventListener("load", () => {
+    const masonry = new Masonry(masonryGrid, {
+      itemSelector: ".masonry-grid-item",
+      gutter: ".masonry-gutter",
+      percentPosition: true,
+    });
+  
+    imagesLoaded(masonry,()=>{
+      masonry.layout()
+    })
         gsap.to("#loader",{opacity:0,ease: "expo",duration: 0.6,onComplete() {loader.style.display = "none"}})
         const timeline = gsap.timeline({ defaults: { ease: "expo", opacity: 0 } });
         timeline.from(".gsap-logo", { x: -150 });

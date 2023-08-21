@@ -1,10 +1,7 @@
-import Masonry from "masonry-layout";
 import PhotoSwipeLightbox from "photoswipe/lightbox";
 import "photoswipe/style.css";
 import { gsap } from "gsap";
-import imagesLoaded from 'imagesloaded'
 export const setupRealizations = ({
-  masonryGrid,
   expandLayout,
   expandButton,
   realizations,
@@ -19,17 +16,7 @@ export const setupRealizations = ({
     });
   });
 
-  const masonry = new Masonry(masonryGrid, {
-    itemSelector: ".masonry-grid-item",
-    gutter: ".masonry-gutter",
-    percentPosition: true,
-  });
 
-  imagesLoaded(masonry,()=>{
-    masonry.layout()
-    masonry.reloadItems()
-    console.log("reloaded")
-  })
 
 
   const lightbox = new PhotoSwipeLightbox({

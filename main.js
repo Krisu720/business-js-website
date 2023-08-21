@@ -28,10 +28,9 @@ setupSlider({
 
 setupOffer({ cards: document.querySelectorAll(".gloweffect") });
 
-setupLoader({ loader: document.getElementById("loader") });
+setupLoader({ loader: document.getElementById("loader"),masonryGrid: document.getElementById("masonry-grid") });
 
 setupRealizations({
-  masonryGrid: document.getElementById("masonry-grid"),
   realizations: document.getElementById("realizacje"),
   expandButton: document.getElementById("expandbutton"),
   expandLayout: document.getElementById("expandlayout"),
