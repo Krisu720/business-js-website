@@ -22,7 +22,7 @@ html {
 }
 
 .button {
-  @apply rounded-full px-3 py-2 text-sm font-normal lg:px-6 lg:pb-3.5 lg:pt-3 lg:text-base;
+  @apply rounded-full px-3 py-2 text-sm font-normal xl:px-6 xl:pb-3.5 xl:pt-3 xl:text-base lg:px-4 lg:py-2.5 lg:text-sm;
 }
 
 .gloweffect::before {

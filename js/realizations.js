@@ -1,11 +1,14 @@
 import PhotoSwipeLightbox from "photoswipe/lightbox";
 import "photoswipe/style.css";
 import { gsap } from "gsap";
+
 export const setupRealizations = ({
   expandLayout,
   expandButton,
   realizations,
 }) => {
+
+  //on click expand realizations
   expandButton.addEventListener("click", () => {
     realizations.setAttribute("data-expanded", "true");
     gsap.to(expandLayout, {
@@ -16,16 +19,12 @@ export const setupRealizations = ({
     });
   });
 
-
-
-
   const lightbox = new PhotoSwipeLightbox({
     gallery: "#masonry-grid",
     children: "a",
     pswpModule: () => import("photoswipe"),
   });
   lightbox.init();
-
 
   gsap.from(".gsap-realizations-slide", {
     scrollTrigger: {
@@ -36,5 +35,4 @@ export const setupRealizations = ({
     opacity: 0,
     stagger: 0.12,
   });
-
 };

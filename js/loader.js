@@ -10,6 +10,7 @@ export const setupLoader = ({ loader,masonryGrid }) => {
       percentPosition: true,
     });
   
+    //load images and restart layout to prevent stacking images on top of each other
     imagesLoaded(masonry,()=>{
       masonry.layout()
     })

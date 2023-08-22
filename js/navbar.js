@@ -7,6 +7,7 @@ export const setupNavbar = ({
   subMenu,
   subMenuButton,
 }) => {
+
   const showSearchInput = () => {
     const currValue = searchInput.getAttribute("data-show");
 
@@ -14,14 +15,16 @@ export const setupNavbar = ({
       "data-show",
       currValue === "true" ? "false" : "true",
     );
+
     if (currValue === "false") {
       searchInput.focus();
     }
   };
 
-  const changeVisibility = (stan) => {
-    if (stan) {
-      const real = stan === true ? "true" : "false";
+  //submenu visibility handler
+  const changeVisibility = (state) => {
+    if (state) {
+      const real = state === true ? "true" : "false";
       subMenu.setAttribute("data-open", real);
     } else {
       const atr = subMenu.getAttribute("data-open");
@@ -29,6 +32,7 @@ export const setupNavbar = ({
     }
   };
 
+  //close mobilemenu on <a> click 
   for (const item of mobileMenu.children[0].children) {
     if (item.nodeName === "A") {
       item.addEventListener("click", () => {
@@ -36,7 +40,7 @@ export const setupNavbar = ({
       });
     }
   }
-
+  //prevent showing mobile menu on higher breakpoint
   window.addEventListener("resize", (e) => {
     if (window.innerWidth > 768) {
       mobileMenu.setAttribute("data-show", "false");
@@ -46,9 +50,12 @@ export const setupNavbar = ({
   subMenuButton.addEventListener("click", () => changeVisibility());
   subMenuButton.addEventListener("mouseenter", () => changeVisibility(true));
   subMenu.addEventListener("mouseleave", () => changeVisibility());
+
+
   closeMenu.addEventListener("click", () => {
     mobileMenu.setAttribute("data-show", "false");
   });
+
   toggleMenu.addEventListener("click", () => {
     const currValue = mobileMenu.getAttribute("data-show");
     mobileMenu.setAttribute(
@@ -56,5 +63,6 @@ export const setupNavbar = ({
       currValue === "true" ? "false" : "true",
     );
   });
+  
   searchToggle.addEventListener("click", () => showSearchInput());
 };

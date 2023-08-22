@@ -1,6 +1,5 @@
 export const setupSlider = ({ slider, nextButton, prevButton }) => {
   let currentSlide = 0;
-  console.log(currentSlide);
   const slidesCount = parseInt(slider.children.length - 1);
 
   const nextSlide = () => {

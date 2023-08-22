@@ -1,7 +1,7 @@
 import { gsap } from "gsap";
 
 export const setupOffer = ({ cards }) => {
-
+  //cards glow animation
   const handleMouseMove = (e) => {
     const { currentTarget: target } = e;
 
@@ -12,7 +12,6 @@ export const setupOffer = ({ cards }) => {
     target.style.setProperty("--mouse-x", `${x}px`);
     target.style.setProperty("--mouse-y", `${y}px`);
   };
-
   for (const card of cards) {
     card.onmousemove = (e) => handleMouseMove(e);
   }
